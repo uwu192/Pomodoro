@@ -3,33 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
-p{
-    font-family: serif
-}
 body{
     background-color: rgb(186, 43, 63);
 }
+/*HEADER*/
 .header{
     width: 100%;
     height: min(10vh,10vw);
     background-color: brown;
 }
 .Options{
-    height:min(10vh,10vw);
-    width: min(10vh,10vw);
+    height:min(9.5vh,9.5vw);
+    width: min(9.5vh,9.5vw);
 }
 .Options img{
     width: 100%;
     height: 100%;
 }
 .Options button{
-    border-radius: 1px;
+    border-radius: 10px;
     border-color: red;
     background-color: rgba(0,0,0,0);
 }
 .Options button:hover{
     background-color: darkred;
-    border-radius: 1px;
+    border-radius: 10px;
     border-color: darkred;
 }
 #line{
@@ -37,7 +35,7 @@ body{
     width: 50vw;
     top : min(10vh,10vw);
     margin-left: 25vw;
-    border-bottom: 2px solid darkred
+    border-bottom: 2px solid black
 }
 #header_tomato{
     position: absolute;
@@ -48,15 +46,15 @@ body{
 }
 #Report{
     position: absolute;
-    right: 35vw;
+    right: 32vw;
 }
 #Account{
     position: absolute;
-    right: 25vw;
+    right: 22vw;
 }
 #Setting{
     position: absolute;
-    right: 15vw;
+    right: 12vw;
 }
 #name_head{
     position: absolute;
@@ -69,6 +67,72 @@ body{
     height: min(12vw,12vh);
     width: min(30vw,30vh);
 }
+/*cycle*/
+.body{
+    width: 100%;
+    height: 100vh;
+.cycle_active{
+    width: 25%;
+    height: 10%;
+    background-color: rgb(145, 34, 49);
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+}
+.cycle{
+    width: 25%;
+    height: 10%;
+    background-color: rgba(0, 0, 0,0);
+    border-radius: 5px;
+    border-style: none;
+}
+.cycle_text{
+    font-family: cursive;
+    text-align: center;
+    color: white;
+    @media screen and (max-width: 1000px)
+    {
+        font-size: min(2.5vw,2.5vh);
+    }
+    font-size: min(4vw,4vh);
+}
+}
+#Count_box{
+    border-radius: 10px;
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    width: 50vw;
+    height: 60vh;
+    background-color: rgba(255, 179, 179 , 0.2);
+}
+#Focus{
+    position: absolute;
+    top : 10%;
+    left: 5%;
+}
+#Short_break{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+}
+#Long_break{
+    position: absolute;
+    top: 10%;
+    left: 65%;
+}
+/*timer*/
+#Timer{
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    font-size: min(10vw,10vh);
+    font-weight: bold;
+    color: wheat;
+}
+/*Start*/
 
 
 
