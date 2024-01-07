@@ -133,6 +133,24 @@ body{
     color: wheat;
 }
 /*Start*/
-
+#Start{
+    position: absolute;
+    top : 70%;
+    left: 20%;
+    height: 10vh;
+    width: 30vw;
+    border-radius: 10px;
+    border: none;
+}
+#Start_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    font-family: cursive;
+    font-size: min(10vw,10vh);
+    color: rgb(145, 34, 49);
+    font-weight: bold;
+}
 
 
