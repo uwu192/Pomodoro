@@ -21,14 +21,15 @@ body{
     height: 100%;
 }
 .Options button{
-    border-radius: 10px;
-    border-color: red;
     background-color: rgba(0,0,0,0);
+    border: none;
 }
 .Options button:hover{
     background-color: darkred;
-    border-radius: 10px;
-    border-color: darkred;
+}
+.Options button:active{
+    position: absolute;
+    top : 1vh;
 }
 #line{
     position: absolute;
@@ -78,6 +79,14 @@ body{
     border-radius: 5px;
     border-style: none;
     font-weight: bold;
+}
+.cycle:active{
+    margin-top: 1vh;
+    width: 25%;
+    height: 10%;
+    background-color: rgba(145, 34, 49,0.5);
+    border-radius: 5px;
+    border-style: none;
 }
 .cycle{
     width: 25%;
@@ -136,6 +145,16 @@ body{
 #Start{
     position: absolute;
     top : 70%;
+    left: 20%;
+    height: 10vh;
+    width: 30vw;
+    border-radius: 10px;
+    border: none;
+}
+#Start:active{
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 72%;
     left: 20%;
     height: 10vh;
     width: 30vw;
