@@ -30,15 +30,16 @@ body{
 .Options button:active{
     position: absolute;
     top : 1vh;
+    background-color: rgba(139, 0, 0, 0.4)
 }
-#line{
+#Line{
     position: absolute;
     width: 50vw;
     top : min(10vh,10vw);
     margin-left: 25vw;
     border-bottom: 2px solid black
 }
-#header_tomato{
+#Header_tomato{
     position: absolute;
     width: min(9vw,9vh);
     height: min(9vw,9vh);
@@ -57,7 +58,7 @@ body{
     position: absolute;
     right: 12vw;
 }
-#name_head{
+#Name_head{
     position: absolute;
     left: 35vw;
     @media screen and (max-width: 1000px)
@@ -173,3 +174,92 @@ body{
 }
 
 
+
+/*LOGIN PAGE------------------------------------*/
+.box_input{
+    margin-left: 15%;
+    width: 70%;
+    height: 8%;
+    border-radius: 10px;
+    border-color: grey;
+    background-color: white;
+    font-size: min(3vw,3vh);
+}
+.line_or{
+    position: absolute;
+    margin-top: 2vh;
+    width: 22vw;
+    border-bottom: 2px solid gray;
+}
+.input_text{
+    font-family: cursive;
+    font-size: min(4vw,4vh);
+}
+#Login_text{
+    font-size: min(8vw,8vh);
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+}
+#Login_box{
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: white;
+    height: 80vh;
+    width: 50vw;
+}
+#Google_logo{
+    display: none;
+    margin-left: 8vw;
+    height: 50px;
+    width: 70px;
+}
+#Google_login{
+    margin-top: 3vh;
+}
+#Or_text{
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    font-size: min(5vw,5vh);
+    color: rgb(89, 89, 89);
+}
+#line_1{
+    position: absolute;
+    right: 25vw;
+}
+#Google_text{
+    font-family: cursive;
+    font-size: min(5vw,5vh);
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 1000px)
+    {
+        #Google_logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #Google_text{
+            display: none;
+        }
+    }
+#User{
+    margin-top: 2vh;
+}
+#Pass{
+    margin-top: 2vh;
+}
+#Login_button{
+    font-size: min(10vw,10vh);
+    height: 20vh;
+    font-family: cursive;
+    margin-top: 5vh;
+}
+#Login_button:active{
+    margin-top: 6vh;
+    background-color: rgba(186, 43, 63,0.4);
+}
