@@ -6,11 +6,25 @@
 body{
     background-color: rgb(186, 43, 63);
 }
+input::placeholder {
+    color:rgb(85, 85, 85);
+    font-weight: bold;
+    font-family: cursive;
+    text-align: center;
+}
+input[type="number"] {
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+}
 /*HEADER*/
 .header{
     width: 100%;
     height: min(10vh,10vw);
     background-color: brown;
+}
+.header #Line{
+    top : min(10vw,10vh);
 }
 .Options{
     height:min(9.5vh,9.5vw);
@@ -29,15 +43,8 @@ body{
 }
 .Options button:active{
     position: absolute;
-    top : 1vh;
+    top : 0.5vh;
     background-color: rgba(139, 0, 0, 0.4)
-}
-#Line{
-    position: absolute;
-    width: 50vw;
-    top : min(10vh,10vw);
-    margin-left: 25vw;
-    border-bottom: 2px solid black
 }
 #Header_tomato{
     position: absolute;
@@ -191,15 +198,17 @@ body{
     width: 22vw;
     border-bottom: 2px solid gray;
 }
-.input_text{
+#Login_box .input_text{
+    display: flex;
+    justify-content: center;
     font-family: cursive;
     font-size: min(4vw,4vh);
 }
 #Login_text{
-    font-size: min(8vw,8vh);
-    font-family: cursive;
     display: flex;
     justify-content: center;
+    font-size: min(8vw,8vh);
+    font-family: cursive;
 }
 #Login_box{
     margin-top: 2vh;
@@ -262,4 +271,173 @@ body{
 #Login_button:active{
     margin-top: 6vh;
     background-color: rgba(186, 43, 63,0.4);
+}
+#Back{
+    position: absolute;
+    top:0px;
+    background: none;
+    border: none;
+    height: min(10vw,10vh)
+}
+/*Settings*/
+.setting_box_input
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    border-radius: 6px;
+    border-color: grey;
+    background-color: rgb(239, 239, 239);
+    font-size: min(3vw,3vh);
+}
+#Setting_box{
+    display: none;
+    border-radius: 10px;
+    position: absolute;
+    background-color: white;
+    width: 50vw;
+    height: 80vh;
+    top: 15vh;
+    left: 25vw;
+}
+#Line
+{
+    position: absolute;
+    width: 50vw;
+    margin-left: 25vw;
+    border-bottom: 2px solid black
+}
+#Setting_box #Line
+{
+    margin-left: 0vw;
+    margin-top: 1vh;
+}
+#Setting_text
+{
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    font-size: min(7vh,7vw);;
+}
+#Clock
+{
+    margin-left: 1vw;
+    margin-top: 2vh;
+    height: min(10vh,10vw);;
+    width: min(10vh,10vw);;
+}
+#Setting_time_text
+{
+    display: inline;
+    font-size: min(5vh,5vw);
+    font-family: cursive;
+}
+#Setting_time
+{
+    display: flex;
+}
+#Setting_time_input_text
+{
+    display: flex;
+    justify-content: center;
+    font-size: min(5vh,5vw);
+    font-family: cursive;
+}
+#Setting_time_focus
+{
+    width: 25%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+#Setting_time_shortbreak
+{
+    width: 25%;
+    margin-left: 5%;
+    display: inline-flex;
+    flex-direction: column;
+}
+#Setting_time_longbreak
+{
+    width: 25%;
+    margin-left: 5%;
+    display: inline-flex;
+    flex-direction: column;
+}
+#Setting_time_interval
+{
+    display: flex;
+    margin-left: 2vw;
+    margin-top: 3vh;
+    font-size: min(4vh,4vw);
+    font-family: cursive;
+}
+#setting_box_input_interval
+{
+    margin-left: 6vw;
+    box-sizing: border-box;
+    width: 6vw;
+    height: 6vh;
+    border-radius: 6px;
+    border-color: grey;
+    background-color: rgb(239, 239, 239);
+    font-size: min(3vw,3vh);
+}
+#Ringtone_input
+{
+    display: none;
+}
+#Ringtone
+{
+    width: 50vw;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border-color: grey;
+}
+#Ringtone:active
+{
+    opacity: 0.5;
+}
+#Ringtone_input_label
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#Ringtone_text
+{
+    align-content: center;
+    font-family: cursive;
+}
+#Ringtone_icon
+{
+    width: min(8vh,8vw);
+    height: min(8vh,8vw);
+}
+#Done
+{
+    right: 0;
+    top: 69vh;
+    position: absolute;
+    background: none;
+    border: 0;
+}
+#Done:active
+{
+    top:70vh;
+    opacity: 0.5;
+}
+#Done_icon
+{
+    margin-right: 2vw;
+    width: min(10vw,10vh);
+    height: min(10vw,10vh);
+}
+#Error
+{
+    font-family: cursive;
+    font-size: min(3vw,3vh);
 }
