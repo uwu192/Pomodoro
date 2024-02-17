@@ -38,7 +38,7 @@
                 </div>
                 <div id="Setting_time_interval">
                     <div>Long Break interval</div>
-                    <input id="setting_box_input_interval" id="Setting_interval" type="number" placeholder="4">
+                    <input id="setting_box_input_interval" type="number" placeholder="4">
                     <div>Times</div>                
                 </div>
                 <div id="Line"></div>
@@ -51,19 +51,19 @@
                 </div>
                 <input id="Ringtone_input" type="file">
                 <div id="Line"></div>
-                <div id="Error">You must put focus and break time less than 1000 <br>
+                <div id="Error_nofi">You must put focus and break time less than 1000 <br>
                     and the number of interval less than 10</div>
                 <button id="Done" onclick="Get_value_time()"><img src="assets/Done.png" id="Done_icon"></button>
             </div>
             <div id="Count_box">
-                <button class="cycle_active" id="Focus">
+                <button class="cycle_active" id="Focus" onclick="switch_focus()">
                     <div class="cycle_text">Focus</div>
                 </button>
-                <button class="cycle" id="Short_break">
-                    <div class="cycle_text">Short break</div>
+                <button class="cycle" id="Short_break" onclick="switch_short()">
+                    <div class="cycle_text">Short</div>
                 </button>
-                <button class="cycle" id="Long_break">
-                    <div class="cycle_text">Long break</div>
+                <button class="cycle" id="Long_break" onclick="switch_long()">
+                    <div class="cycle_text">Long</div>
                 </button>
                 <div id="Timer" >25:00</div>
                 <button id="Start"><div id="Start_text">Start</div></button>
