@@ -436,7 +436,7 @@ input[type="number"] {
     width: min(10vw,10vh);
     height: min(10vw,10vh);
 }
-#Error
+#Error_nofi
 {
     font-family: cursive;
     font-size: min(3vw,3vh);
