@@ -1,27 +1,39 @@
-//Main
+//Main//
 let focus_time = 25;
 let short_break_time = 5;
 let long_break_time = 15;
 let interval = 2;
-
-var seconds = 25;
 var start_count = false;
+//Default counter in first_time_page//
+var minutes = focus_time;
+var seconds = minutes * 60;
 function Count() {//-----------------------------------Raw{
     if (seconds == 0){
         clearInterval(start);
     }
-    document.getElementById("Timer").innerHTML = seconds;
-    console.log(seconds);
+    minutes_on_screen = Math.floor(seconds/60)
+    seconds_on_screen = seconds % 60;
+    if (seconds_on_screen >= 10)
+    {
+    document.getElementById("Timer").innerHTML = `${minutes_on_screen}:${seconds_on_screen}`;
+    }
+    else
+    {
+        document.getElementById("Timer").innerHTML = `${minutes_on_screen}:0${seconds_on_screen}`;
+    }
+    console.log(`left ${minutes_on_screen} minutes,${seconds_on_screen} seconds`);
     seconds -= 1;
 }
-document.getElementById("Start").onclick = function(){
+document.getElementById("Start").onclick = function(minutes){
     if (start_count == false)
     {
+        document.getElementById("Start_text").innerHTML = "Pause";
         start = setInterval(Count,1000);
         start_count = true;
     }
     else
     {
+        document.getElementById("Start_text").innerHTML = "Start";
         start_count = false;
         clearInterval(start);
     }
@@ -43,7 +55,6 @@ function Get_value_time()
     input2 = document.getElementById("Setting_shortbreak").value;
     input3 = document.getElementById("Setting_longbreak").value;
     input4 = document.getElementById("setting_box_input_interval").value;
-    console.log('ad');
     if (input1 == '')
     {
         document.getElementById("Error_nofi").innerHTML = "You have not entered anything in the Focus box";
@@ -91,22 +102,34 @@ function switch_focus()
     document.getElementById("Focus").className = "cycle_active";
     document.getElementById("Short_break").className = "cycle";
     document.getElementById("Long_break").className = "cycle";
-    seconds = focus_time;
-    document.getElementById("Timer").innerHTML = seconds;
+    minutes = focus_time;
+    seconds = minutes * 60;
+    clearInterval(start);
+    start_count = false
+    document.getElementById("Start_text").innerHTML = "Start";
+    document.getElementById("Timer").innerHTML = `${minutes}:00`;
 }
 function switch_short() 
 {
     document.getElementById("Focus").className = "cycle";
     document.getElementById("Short_break").className = "cycle_active";
     document.getElementById("Long_break").className = "cycle";
-    seconds = short_break_time;
-    document.getElementById("Timer").innerHTML = seconds;
+    minutes = short_break_time;
+    seconds = minutes * 60;
+    clearInterval(start);
+    start_count = false
+    document.getElementById("Start_text").innerHTML = "Start";
+    document.getElementById("Timer").innerHTML = `${minutes}:00`;
 }
 function switch_long() 
 {
     document.getElementById("Focus").className = "cycle";
     document.getElementById("Short_break").className = "cycle";
     document.getElementById("Long_break").className = "cycle_active";
-    seconds = long_break_time;
-    document.getElementById("Timer").innerHTML = seconds;
+    minutes = long_break_time;
+    seconds = minutes * 60;
+    clearInterval(start);
+    start_count = false
+    document.getElementById("Start_text").innerHTML = "Start";
+    document.getElementById("Timer").innerHTML = `${minutes}:00`;
 }
