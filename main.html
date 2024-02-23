@@ -1,74 +1,110 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            POMODORO
-        </title>
-        <link rel="icon" href="assets/icon.png">
-        <link rel="stylesheet" href="assets/style.css">
-    </head>        
-    <body>
-        <div class="header">
-            <img src="assets/header.png" alt="If you can't see the tomato, you're blind!" id="Header_tomato">
-            <img src="assets/name_head.png" id="Name_head">
-            <div class="Options" id="Report"><button><img src="assets/Report.png"></button></div>
-            <div class="Options" id="Account"><button><a href="login.html"><img src="assets/Account.png"></a></button></div>
-            <div class="Options" id="Setting"><button onclick="Open_setting()"><img src="assets/Setting.png"></button></div>
-            <div id="Line"></div>
+  <head>
+    <title>POMODORO</title>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="assets/header.png"
+        alt="If you can't see the tomato, you're blind!"
+        id="Header_tomato"
+      />
+      <img src="assets/name_head.png" id="Name_head" />
+      <div class="Options" id="Report">
+        <button><img src="assets/Report.png" /></button>
+      </div>
+      <div class="Options" id="Account">
+        <button>
+          <a href="login.html"><img src="assets/Account.png" /></a>
+        </button>
+      </div>
+      <div class="Options" id="Setting">
+        <button onclick="Open_setting()">
+          <img src="assets/Setting.png" />
+        </button>
+      </div>
+      <div id="Line"></div>
+    </div>
+    <div class="body">
+      <div id="Setting_box">
+        <div id="Setting_text">Settings</div>
+        <div id="Line"></div>
+        <img src="assets/clock.png" id="Clock" />
+        <div id="Setting_time_text">Time(minutes)</div>
+        <div id="Setting_time">
+          <div id="Setting_time_focus">
+            <div id="Setting_time_input_text">Focus</div>
+            <input
+              class="setting_box_input"
+              type="number"
+              placeholder="25"
+              id="Setting_focus"
+            />
+          </div>
+          <div id="Setting_time_shortbreak">
+            <div id="Setting_time_input_text">Short</div>
+            <input
+              class="setting_box_input"
+              type="number"
+              placeholder="5"
+              id="Setting_shortbreak"
+            />
+          </div>
+          <div id="Setting_time_longbreak">
+            <div id="Setting_time_input_text">Long</div>
+            <input
+              class="setting_box_input"
+              type="number"
+              placeholder="15"
+              id="Setting_longbreak"
+            />
+          </div>
         </div>
-        <div class="body">
-            <div id="Setting_box">
-                <div id="Setting_text">Settings</div>
-                <div id="Line"></div>
-                <img src="assets/clock.png" id="Clock">
-                <div id="Setting_time_text">Time(minutes)</div>
-                <div id="Setting_time">
-                    <div id="Setting_time_focus">
-                        <div id="Setting_time_input_text">Focus</div>
-                        <input class="setting_box_input" type="number" placeholder="25" id="Setting_focus">
-                    </div>
-                    <div id="Setting_time_shortbreak">
-                        <div id="Setting_time_input_text">Short</div>
-                        <input class="setting_box_input" type="number" placeholder="5" id="Setting_shortbreak">
-                    </div>
-                    <div id="Setting_time_longbreak">
-                        <div id="Setting_time_input_text">Long</div>
-                        <input class="setting_box_input" type="number" placeholder="15" id="Setting_longbreak">
-                    </div>
-                </div>
-                <div id="Setting_time_interval">
-                    <div>Long Break interval</div>
-                    <input id="setting_box_input_interval" type="number" placeholder="4">
-                    <div>Times</div>                
-                </div>
-                <div id="Line"></div>
-                <div id="Setting_time_input_text">Ringtone</div>
-                <div id="Ringtone">
-                <label for="Ringtone_input" id="Ringtone_input_label">
-                    <img src="assets/Ringtone.png" id="Ringtone_icon">
-                    <div id="Ringtone_text">Click here to download</div>
-                </label>    
-                </div>
-                <input id="Ringtone_input" type="file">
-                <div id="Line"></div>
-                <div id="Error_nofi">You must put focus and break time less than 1000 <br>
-                    and the number of interval less than 10</div>
-                <button id="Done" onclick="Get_value_time()"><img src="assets/Done.png" id="Done_icon"></button>
-            </div>
-            <div id="Count_box">
-                <button class="cycle_active" id="Focus" onclick="switch_focus()">
-                    <div class="cycle_text">Focus</div>
-                </button>
-                <button class="cycle" id="Short_break" onclick="switch_short()">
-                    <div class="cycle_text">Short</div>
-                </button>
-                <button class="cycle" id="Long_break" onclick="switch_long()">
-                    <div class="cycle_text">Long</div>
-                </button>
-                <div id="Timer" >25:00</div>
-                <button id="Start"><div id="Start_text">Start</div></button>
-            </div>
+        <div id="Setting_time_interval">
+          <div>Long Break interval</div>
+          <input
+            id="setting_box_input_interval"
+            type="number"
+            placeholder="4"
+          />
+          <div>Times</div>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <div id="Line"></div>
+        <div id="Setting_time_input_text">Ringtone</div>
+        <div id="Ringtone">
+          <label for="Ringtone_input" id="Ringtone_input_label">
+            <img src="assets/Ringtone.png" id="Ringtone_icon" />
+            <div id="Ringtone_text">Click here to download</div>
+          </label>
+        </div>
+        <input id="Ringtone_input" type="file" onclick="Change_ringtone()" />
+        <div id="Line"></div>
+        <div id="Error_nofi">
+          You must put focus and break time less than 1000 <br />
+          and the number of interval less than 10
+        </div>
+        <button id="Done" onclick="Get_value_time()">
+          <img src="assets/Done.png" id="Done_icon" />
+        </button>
+      </div>
+      <div id="Count_box">
+        <button class="cycle_active" id="Focus" onclick="Switch_focus()">
+          <div class="cycle_text">Focus</div>
+        </button>
+        <button class="cycle" id="Short_break" onclick="Switch_short()">
+          <div class="cycle_text">Short</div>
+        </button>
+        <button class="cycle" id="Long_break" onclick="Switch_long()">
+          <div class="cycle_text">Long</div>
+        </button>
+        <div id="Timer">25:00</div>
+        <button id="Start"><div id="Start_text">Start</div></button>
+      </div>
+      <audio src="assets/alarm.mp3" id="Alarm"></audio>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
