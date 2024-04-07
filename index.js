@@ -10,7 +10,6 @@ var in_count = "focus";
 var minutes = focus_time;
 var seconds = minutes * 60;
 function Count() {
-  //-----------------------------------Raw{
   if (seconds == 0) {
     Alarm.play();
     clearInterval(start);
@@ -41,12 +40,11 @@ function Count() {
       "Timer"
     ).innerHTML = `${minutes_on_screen}:0${seconds_on_screen}`;
   }
-  console.log(`left ${minutes_on_screen} minutes,${seconds_on_screen} seconds`);
 }
 document.getElementById("Start").onclick = function (minutes) {
   if (start_count == false) {
     document.getElementById("Start_text").innerHTML = "Pause";
-    start = setInterval(Count, 1);
+    start = setInterval(Count, 1000);
     start_count = true;
   } else {
     document.getElementById("Start_text").innerHTML = "Start";
@@ -168,4 +166,5 @@ function Change_ringtone() {
     };
     reader.readAsDataURL(audio_input.files[0]);
   }
+  document.getElementById("Ringtone_text").innerHTML = "Imported";
 }
